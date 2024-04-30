@@ -17,10 +17,10 @@
     }
   },
   "installation": {
-    "version": "18.3.1",
+    "version": "19.3.1",
     "plugins": {
-      "@nx/gradle": "latest",
-      "@nx/workspace": "18.3.1"
+      "@nx/gradle": "19.3.1",
+      "@nx/workspace": "19.3.1"
     }
   },
   "plugins": [
