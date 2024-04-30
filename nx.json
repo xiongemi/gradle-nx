@@ -19,7 +19,8 @@
   "installation": {
     "version": "18.3.1",
     "plugins": {
-      "@nx/gradle": "latest"
+      "@nx/gradle": "latest",
+      "@nx/workspace": "18.3.1"
     }
   },
   "plugins": [
@@ -31,5 +32,7 @@
         "buildTargetName": "build"
       }
     }
-  ]
+  ],
+  "nxCloudAccessToken": "NzExZmZiZDQtMTk3YS00YjFmLThmZWUtZWY4ZDNlOTUxYjU1fHJlYWQtd3JpdGU=",
+  "nxCloudUrl": "https://staging.nx.app"
 }
