@@ -1,0 +1,160 @@
+{
+  "version": "6.0",
+  "nxVersion": "19.3.1",
+  "deps": {
+    "nx": "19.3.1",
+    "@nx/gradle": "19.3.1",
+    "@nx/workspace": "19.3.1"
+  },
+  "pathMappings": {},
+  "nxJsonPlugins": [
+    {
+      "name": "@nx/gradle",
+      "version": "19.3.1",
+      "options": {
+        "testTargetName": "test",
+        "classesTargetName": "classes",
+        "buildTargetName": "build"
+      }
+    }
+  ],
+  "fileMap": {
+    "nonProjectFiles": [],
+    "projectFileMap": {
+      "list": [
+        {
+          "file": "list/build.gradle.kts",
+          "hash": "6436321262153262270"
+        },
+        {
+          "file": "list/src/main/java/org/example/list/LinkedList.java",
+          "hash": "8229133109996014460"
+        },
+        {
+          "file": "list/src/test/java/org/example/list/LinkedListTest.java",
+          "hash": "1765234574577938622"
+        }
+      ],
+      "utilities": [
+        {
+          "file": "utilities/build.gradle.kts",
+          "hash": "10520838754640360641",
+          "deps": [
+            "list"
+          ]
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/JoinUtils.java",
+          "hash": "3702364115617000706"
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/SplitUtils.java",
+          "hash": "12226535336337952737"
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/StringUtils.java",
+          "hash": "9459597037867118760"
+        }
+      ],
+      "add-nx-to-gradle": [
+        {
+          "file": ".gitattributes",
+          "hash": "14406647976364820401"
+        },
+        {
+          "file": ".github/workflows/ci.yml",
+          "hash": "9616709790032373174"
+        },
+        {
+          "file": ".gitignore",
+          "hash": "6969859279603773268"
+        },
+        {
+          "file": ".nx/nxw.js",
+          "hash": "11254603345854076312"
+        },
+        {
+          "file": "build.gradle.kts",
+          "hash": "6776876968973565169"
+        },
+        {
+          "file": "buildSrc/build.gradle.kts",
+          "hash": "15532201283982489761"
+        },
+        {
+          "file": "buildSrc/settings.gradle.kts",
+          "hash": "16718776268781330855"
+        },
+        {
+          "file": "buildSrc/src/main/kotlin/buildlogic.java-application-conventions.gradle.kts",
+          "hash": "15581468338725582290"
+        },
+        {
+          "file": "buildSrc/src/main/kotlin/buildlogic.java-common-conventions.gradle.kts",
+          "hash": "11204342448497443980"
+        },
+        {
+          "file": "buildSrc/src/main/kotlin/buildlogic.java-library-conventions.gradle.kts",
+          "hash": "12742436454498367048"
+        },
+        {
+          "file": "gradle/libs.versions.toml",
+          "hash": "5893472395058046713"
+        },
+        {
+          "file": "gradle/wrapper/gradle-wrapper.jar",
+          "hash": "11159507676440420948"
+        },
+        {
+          "file": "gradle/wrapper/gradle-wrapper.properties",
+          "hash": "12318822339592461591"
+        },
+        {
+          "file": "gradlew",
+          "hash": "6979324130797723579"
+        },
+        {
+          "file": "gradlew.bat",
+          "hash": "11330313631402206505"
+        },
+        {
+          "file": "nx",
+          "hash": "17165975525224888679"
+        },
+        {
+          "file": "nx.bat",
+          "hash": "3915364402878513571"
+        },
+        {
+          "file": "nx.json",
+          "hash": "3179041361176487346"
+        },
+        {
+          "file": "settings.gradle.kts",
+          "hash": "3646582444452617464"
+        }
+      ],
+      "app": [
+        {
+          "file": "app/build.gradle.kts",
+          "hash": "1965052749166143223",
+          "deps": [
+            "utilities"
+          ]
+        },
+        {
+          "file": "app/src/main/java/org/example/app/App.java",
+          "hash": "7797906291273752357"
+        },
+        {
+          "file": "app/src/main/java/org/example/app/MessageUtils.java",
+          "hash": "2078673016517968054"
+        },
+        {
+          "file": "app/src/test/java/org/example/app/MessageUtilsTest.java",
+          "hash": "15891109803285817998"
+        }
+      ]
+    }
+  }
+}

@@ -11,4 +11,6 @@ plugins {
 }
 
 rootProject.name = "add-nx-to-gradle"
+
+
 include("app", "list", "utilities")

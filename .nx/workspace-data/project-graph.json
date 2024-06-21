@@ -1,0 +1,1762 @@
+{
+  "nodes": {
+    "utilities": {
+      "name": "utilities",
+      "type": "lib",
+      "data": {
+        "root": "utilities",
+        "name": "utilities",
+        "metadata": {
+          "targetGroups": {
+            "Build": [
+              "assemble",
+              "build",
+              "buildDependents",
+              "buildNeeded",
+              "classes",
+              "clean",
+              "jar",
+              "testClasses"
+            ],
+            "Documentation": [
+              "javadoc"
+            ],
+            "Help": [
+              "buildEnvironment",
+              "dependencies",
+              "dependencyInsight",
+              "help",
+              "javaToolchains",
+              "kotlinDslAccessorsReport",
+              "outgoingVariants",
+              "projects",
+              "properties",
+              "resolvableConfigurations",
+              "tasks"
+            ],
+            "Reporting": [
+              "projectReport"
+            ],
+            "Verification": [
+              "check",
+              "test"
+            ]
+          },
+          "technologies": [
+            "gradle"
+          ]
+        },
+        "targets": {
+          "assemble": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:assemble"
+            },
+            "configurations": {}
+          },
+          "build": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^build",
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/utilities/build"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:build"
+            },
+            "configurations": {}
+          },
+          "buildDependents": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:buildDependents"
+            },
+            "configurations": {}
+          },
+          "buildNeeded": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:buildNeeded"
+            },
+            "configurations": {}
+          },
+          "classes": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/utilities/build/classes"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:classes"
+            },
+            "configurations": {}
+          },
+          "clean": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:clean"
+            },
+            "configurations": {}
+          },
+          "jar": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:jar"
+            },
+            "configurations": {}
+          },
+          "testClasses": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:testClasses"
+            },
+            "configurations": {}
+          },
+          "javadoc": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:javadoc"
+            },
+            "configurations": {}
+          },
+          "buildEnvironment": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:buildEnvironment"
+            },
+            "configurations": {}
+          },
+          "dependencies": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:dependencies"
+            },
+            "configurations": {}
+          },
+          "dependencyInsight": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:dependencyInsight"
+            },
+            "configurations": {}
+          },
+          "help": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:help"
+            },
+            "configurations": {}
+          },
+          "javaToolchains": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:javaToolchains"
+            },
+            "configurations": {}
+          },
+          "kotlinDslAccessorsReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:kotlinDslAccessorsReport"
+            },
+            "configurations": {}
+          },
+          "outgoingVariants": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:outgoingVariants"
+            },
+            "configurations": {}
+          },
+          "projects": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:projects"
+            },
+            "configurations": {}
+          },
+          "properties": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:properties"
+            },
+            "configurations": {}
+          },
+          "resolvableConfigurations": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:resolvableConfigurations"
+            },
+            "configurations": {}
+          },
+          "tasks": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:tasks"
+            },
+            "configurations": {}
+          },
+          "projectReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/utilities/build/reports/project"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:projectReport"
+            },
+            "configurations": {}
+          },
+          "check": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:check"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :utilities:test"
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "list": {
+      "name": "list",
+      "type": "lib",
+      "data": {
+        "root": "list",
+        "name": "list",
+        "metadata": {
+          "targetGroups": {
+            "Build": [
+              "assemble",
+              "build",
+              "buildDependents",
+              "buildNeeded",
+              "classes",
+              "clean",
+              "jar",
+              "testClasses"
+            ],
+            "Documentation": [
+              "javadoc"
+            ],
+            "Help": [
+              "buildEnvironment",
+              "dependencies",
+              "dependencyInsight",
+              "help",
+              "javaToolchains",
+              "kotlinDslAccessorsReport",
+              "outgoingVariants",
+              "projects",
+              "properties",
+              "resolvableConfigurations",
+              "tasks"
+            ],
+            "Reporting": [
+              "projectReport"
+            ],
+            "Verification": [
+              "check",
+              "test"
+            ]
+          },
+          "technologies": [
+            "gradle"
+          ]
+        },
+        "targets": {
+          "assemble": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:assemble"
+            },
+            "configurations": {}
+          },
+          "build": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^build",
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/list/build"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:build"
+            },
+            "configurations": {}
+          },
+          "buildDependents": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:buildDependents"
+            },
+            "configurations": {}
+          },
+          "buildNeeded": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:buildNeeded"
+            },
+            "configurations": {}
+          },
+          "classes": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/list/build/classes"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:classes"
+            },
+            "configurations": {}
+          },
+          "clean": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:clean"
+            },
+            "configurations": {}
+          },
+          "jar": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:jar"
+            },
+            "configurations": {}
+          },
+          "testClasses": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:testClasses"
+            },
+            "configurations": {}
+          },
+          "javadoc": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:javadoc"
+            },
+            "configurations": {}
+          },
+          "buildEnvironment": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:buildEnvironment"
+            },
+            "configurations": {}
+          },
+          "dependencies": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:dependencies"
+            },
+            "configurations": {}
+          },
+          "dependencyInsight": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:dependencyInsight"
+            },
+            "configurations": {}
+          },
+          "help": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:help"
+            },
+            "configurations": {}
+          },
+          "javaToolchains": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:javaToolchains"
+            },
+            "configurations": {}
+          },
+          "kotlinDslAccessorsReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:kotlinDslAccessorsReport"
+            },
+            "configurations": {}
+          },
+          "outgoingVariants": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:outgoingVariants"
+            },
+            "configurations": {}
+          },
+          "projects": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:projects"
+            },
+            "configurations": {}
+          },
+          "properties": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:properties"
+            },
+            "configurations": {}
+          },
+          "resolvableConfigurations": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:resolvableConfigurations"
+            },
+            "configurations": {}
+          },
+          "tasks": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:tasks"
+            },
+            "configurations": {}
+          },
+          "projectReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/list/build/reports/project"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:projectReport"
+            },
+            "configurations": {}
+          },
+          "check": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:check"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:test"
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "app": {
+      "name": "app",
+      "type": "lib",
+      "data": {
+        "root": "app",
+        "name": "app",
+        "metadata": {
+          "targetGroups": {
+            "Application": [
+              "run"
+            ],
+            "Build": [
+              "assemble",
+              "build",
+              "buildDependents",
+              "buildNeeded",
+              "classes",
+              "clean",
+              "jar",
+              "testClasses"
+            ],
+            "Custom": [
+              "task1"
+            ],
+            "Distribution": [
+              "assembleDist",
+              "distTar",
+              "distZip",
+              "installDist"
+            ],
+            "Documentation": [
+              "javadoc"
+            ],
+            "Help": [
+              "buildEnvironment",
+              "dependencies",
+              "dependencyInsight",
+              "help",
+              "javaToolchains",
+              "kotlinDslAccessorsReport",
+              "outgoingVariants",
+              "projects",
+              "properties",
+              "resolvableConfigurations",
+              "tasks"
+            ],
+            "Reporting": [
+              "projectReport"
+            ],
+            "Verification": [
+              "check",
+              "test"
+            ]
+          },
+          "technologies": [
+            "gradle"
+          ]
+        },
+        "targets": {
+          "run": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:run"
+            },
+            "configurations": {}
+          },
+          "assemble": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:assemble"
+            },
+            "configurations": {}
+          },
+          "build": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^build",
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/app/build"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:build"
+            },
+            "configurations": {}
+          },
+          "buildDependents": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:buildDependents"
+            },
+            "configurations": {}
+          },
+          "buildNeeded": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:buildNeeded"
+            },
+            "configurations": {}
+          },
+          "classes": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/app/build/classes"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:classes"
+            },
+            "configurations": {}
+          },
+          "clean": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:clean"
+            },
+            "configurations": {}
+          },
+          "jar": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:jar"
+            },
+            "configurations": {}
+          },
+          "testClasses": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:testClasses"
+            },
+            "configurations": {}
+          },
+          "task1": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:task1"
+            },
+            "configurations": {}
+          },
+          "assembleDist": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:assembleDist"
+            },
+            "configurations": {}
+          },
+          "distTar": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:distTar"
+            },
+            "configurations": {}
+          },
+          "distZip": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:distZip"
+            },
+            "configurations": {}
+          },
+          "installDist": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:installDist"
+            },
+            "configurations": {}
+          },
+          "javadoc": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:javadoc"
+            },
+            "configurations": {}
+          },
+          "buildEnvironment": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:buildEnvironment"
+            },
+            "configurations": {}
+          },
+          "dependencies": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:dependencies"
+            },
+            "configurations": {}
+          },
+          "dependencyInsight": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:dependencyInsight"
+            },
+            "configurations": {}
+          },
+          "help": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:help"
+            },
+            "configurations": {}
+          },
+          "javaToolchains": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:javaToolchains"
+            },
+            "configurations": {}
+          },
+          "kotlinDslAccessorsReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:kotlinDslAccessorsReport"
+            },
+            "configurations": {}
+          },
+          "outgoingVariants": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:outgoingVariants"
+            },
+            "configurations": {}
+          },
+          "projects": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:projects"
+            },
+            "configurations": {}
+          },
+          "properties": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:properties"
+            },
+            "configurations": {}
+          },
+          "resolvableConfigurations": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:resolvableConfigurations"
+            },
+            "configurations": {}
+          },
+          "tasks": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:tasks"
+            },
+            "configurations": {}
+          },
+          "projectReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/app/build/reports/project"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:projectReport"
+            },
+            "configurations": {}
+          },
+          "check": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:check"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:test"
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    },
+    "add-nx-to-gradle": {
+      "name": "add-nx-to-gradle",
+      "type": "lib",
+      "data": {
+        "root": ".",
+        "name": "add-nx-to-gradle",
+        "metadata": {
+          "targetGroups": {
+            "Application": [
+              "run"
+            ],
+            "Build": [
+              "assemble",
+              "build",
+              "buildDependents",
+              "buildNeeded",
+              "classes",
+              "clean",
+              "jar",
+              "testClasses"
+            ],
+            "Build Setup": [
+              "init",
+              "wrapper"
+            ],
+            "Custom": [
+              "task1"
+            ],
+            "Distribution": [
+              "assembleDist",
+              "distTar",
+              "distZip",
+              "installDist"
+            ],
+            "Documentation": [
+              "javadoc"
+            ],
+            "Help": [
+              "buildEnvironment",
+              "dependencies",
+              "dependencyInsight",
+              "help",
+              "javaToolchains",
+              "kotlinDslAccessorsReport",
+              "outgoingVariants",
+              "projects",
+              "properties",
+              "resolvableConfigurations",
+              "tasks"
+            ],
+            "Reporting": [
+              "projectReport"
+            ],
+            "Verification": [
+              "check",
+              "test"
+            ]
+          },
+          "technologies": [
+            "gradle"
+          ]
+        },
+        "targets": {
+          "run": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew run"
+            },
+            "configurations": {}
+          },
+          "assemble": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew assemble"
+            },
+            "configurations": {}
+          },
+          "build": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^build",
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/build"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew build"
+            },
+            "configurations": {}
+          },
+          "buildDependents": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew buildDependents"
+            },
+            "configurations": {}
+          },
+          "buildNeeded": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew buildNeeded"
+            },
+            "configurations": {}
+          },
+          "classes": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "^classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/build/classes"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew classes"
+            },
+            "configurations": {}
+          },
+          "clean": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew clean"
+            },
+            "configurations": {}
+          },
+          "jar": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew jar"
+            },
+            "configurations": {}
+          },
+          "testClasses": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew testClasses"
+            },
+            "configurations": {}
+          },
+          "init": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew init"
+            },
+            "configurations": {}
+          },
+          "wrapper": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew wrapper"
+            },
+            "configurations": {}
+          },
+          "task1": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew task1"
+            },
+            "configurations": {}
+          },
+          "assembleDist": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew assembleDist"
+            },
+            "configurations": {}
+          },
+          "distTar": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew distTar"
+            },
+            "configurations": {}
+          },
+          "distZip": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew distZip"
+            },
+            "configurations": {}
+          },
+          "installDist": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew installDist"
+            },
+            "configurations": {}
+          },
+          "javadoc": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew javadoc"
+            },
+            "configurations": {}
+          },
+          "buildEnvironment": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew buildEnvironment"
+            },
+            "configurations": {}
+          },
+          "dependencies": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew dependencies"
+            },
+            "configurations": {}
+          },
+          "dependencyInsight": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew dependencyInsight"
+            },
+            "configurations": {}
+          },
+          "help": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew help"
+            },
+            "configurations": {}
+          },
+          "javaToolchains": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew javaToolchains"
+            },
+            "configurations": {}
+          },
+          "kotlinDslAccessorsReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew kotlinDslAccessorsReport"
+            },
+            "configurations": {}
+          },
+          "outgoingVariants": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew outgoingVariants"
+            },
+            "configurations": {}
+          },
+          "projects": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew projects"
+            },
+            "configurations": {}
+          },
+          "properties": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew properties"
+            },
+            "configurations": {}
+          },
+          "resolvableConfigurations": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew resolvableConfigurations"
+            },
+            "configurations": {}
+          },
+          "tasks": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew tasks"
+            },
+            "configurations": {}
+          },
+          "projectReport": {
+            "cache": false,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "outputs": [
+              "{workspaceRoot}/build/reports/project"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew projectReport"
+            },
+            "configurations": {}
+          },
+          "check": {
+            "cache": true,
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew check"
+            },
+            "configurations": {}
+          },
+          "test": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "classes"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ]
+            },
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew test"
+            },
+            "configurations": {}
+          }
+        },
+        "implicitDependencies": [],
+        "tags": []
+      }
+    }
+  },
+  "externalNodes": {},
+  "dependencies": {
+    "utilities": [
+      {
+        "source": "utilities",
+        "target": "list",
+        "type": "static"
+      }
+    ],
+    "list": [],
+    "app": [
+      {
+        "source": "app",
+        "target": "utilities",
+        "type": "static"
+      }
+    ],
+    "add-nx-to-gradle": []
+  },
+  "version": "6.0"
+}
