@@ -7,3 +7,4 @@ build
 .idea
 .nx/installation
 .nx/cache
+.nx/workflows
