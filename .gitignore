@@ -8,3 +8,4 @@ build
 .nx/installation
 .nx/cache
 .nx/workflows
+.nx/workspace-data

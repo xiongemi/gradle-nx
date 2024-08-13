@@ -58,7 +58,8 @@
             "options": {
               "command": "./gradlew :utilities:assemble"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "build": {
             "cache": true,
@@ -67,8 +68,7 @@
               "^default"
             ],
             "dependsOn": [
-              "^build",
-              "classes"
+              "^build"
             ],
             "metadata": {
               "technologies": [
@@ -82,7 +82,8 @@
             "options": {
               "command": "./gradlew :utilities:build"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildDependents": {
             "cache": true,
@@ -95,7 +96,8 @@
             "options": {
               "command": "./gradlew :utilities:buildDependents"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildNeeded": {
             "cache": true,
@@ -108,7 +110,8 @@
             "options": {
               "command": "./gradlew :utilities:buildNeeded"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "classes": {
             "cache": true,
@@ -131,7 +134,8 @@
             "options": {
               "command": "./gradlew :utilities:classes"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "clean": {
             "cache": true,
@@ -144,7 +148,8 @@
             "options": {
               "command": "./gradlew :utilities:clean"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "jar": {
             "cache": true,
@@ -157,7 +162,8 @@
             "options": {
               "command": "./gradlew :utilities:jar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "testClasses": {
             "cache": true,
@@ -170,7 +176,8 @@
             "options": {
               "command": "./gradlew :utilities:testClasses"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javadoc": {
             "cache": false,
@@ -183,7 +190,8 @@
             "options": {
               "command": "./gradlew :utilities:javadoc"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildEnvironment": {
             "cache": false,
@@ -196,7 +204,8 @@
             "options": {
               "command": "./gradlew :utilities:buildEnvironment"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencies": {
             "cache": false,
@@ -209,7 +218,8 @@
             "options": {
               "command": "./gradlew :utilities:dependencies"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencyInsight": {
             "cache": false,
@@ -222,7 +232,8 @@
             "options": {
               "command": "./gradlew :utilities:dependencyInsight"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "help": {
             "cache": false,
@@ -235,7 +246,8 @@
             "options": {
               "command": "./gradlew :utilities:help"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javaToolchains": {
             "cache": false,
@@ -248,7 +260,8 @@
             "options": {
               "command": "./gradlew :utilities:javaToolchains"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "kotlinDslAccessorsReport": {
             "cache": false,
@@ -261,7 +274,8 @@
             "options": {
               "command": "./gradlew :utilities:kotlinDslAccessorsReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "outgoingVariants": {
             "cache": false,
@@ -274,7 +288,8 @@
             "options": {
               "command": "./gradlew :utilities:outgoingVariants"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projects": {
             "cache": false,
@@ -287,7 +302,8 @@
             "options": {
               "command": "./gradlew :utilities:projects"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "properties": {
             "cache": false,
@@ -300,7 +316,8 @@
             "options": {
               "command": "./gradlew :utilities:properties"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "resolvableConfigurations": {
             "cache": false,
@@ -313,7 +330,8 @@
             "options": {
               "command": "./gradlew :utilities:resolvableConfigurations"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "tasks": {
             "cache": false,
@@ -326,7 +344,8 @@
             "options": {
               "command": "./gradlew :utilities:tasks"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projectReport": {
             "cache": false,
@@ -342,7 +361,8 @@
             "options": {
               "command": "./gradlew :utilities:projectReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "check": {
             "cache": true,
@@ -355,7 +375,8 @@
             "options": {
               "command": "./gradlew :utilities:check"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "test": {
             "cache": true,
@@ -375,7 +396,8 @@
             "options": {
               "command": "./gradlew :utilities:test"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": [],
@@ -440,7 +462,8 @@
             "options": {
               "command": "./gradlew :list:assemble"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "build": {
             "cache": true,
@@ -449,8 +472,7 @@
               "^default"
             ],
             "dependsOn": [
-              "^build",
-              "classes"
+              "^build"
             ],
             "metadata": {
               "technologies": [
@@ -464,7 +486,8 @@
             "options": {
               "command": "./gradlew :list:build"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildDependents": {
             "cache": true,
@@ -477,7 +500,8 @@
             "options": {
               "command": "./gradlew :list:buildDependents"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildNeeded": {
             "cache": true,
@@ -490,7 +514,8 @@
             "options": {
               "command": "./gradlew :list:buildNeeded"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "classes": {
             "cache": true,
@@ -513,7 +538,8 @@
             "options": {
               "command": "./gradlew :list:classes"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "clean": {
             "cache": true,
@@ -526,7 +552,8 @@
             "options": {
               "command": "./gradlew :list:clean"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "jar": {
             "cache": true,
@@ -539,7 +566,8 @@
             "options": {
               "command": "./gradlew :list:jar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "testClasses": {
             "cache": true,
@@ -552,7 +580,8 @@
             "options": {
               "command": "./gradlew :list:testClasses"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javadoc": {
             "cache": false,
@@ -565,7 +594,8 @@
             "options": {
               "command": "./gradlew :list:javadoc"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildEnvironment": {
             "cache": false,
@@ -578,7 +608,8 @@
             "options": {
               "command": "./gradlew :list:buildEnvironment"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencies": {
             "cache": false,
@@ -591,7 +622,8 @@
             "options": {
               "command": "./gradlew :list:dependencies"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencyInsight": {
             "cache": false,
@@ -604,7 +636,8 @@
             "options": {
               "command": "./gradlew :list:dependencyInsight"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "help": {
             "cache": false,
@@ -617,7 +650,8 @@
             "options": {
               "command": "./gradlew :list:help"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javaToolchains": {
             "cache": false,
@@ -630,7 +664,8 @@
             "options": {
               "command": "./gradlew :list:javaToolchains"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "kotlinDslAccessorsReport": {
             "cache": false,
@@ -643,7 +678,8 @@
             "options": {
               "command": "./gradlew :list:kotlinDslAccessorsReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "outgoingVariants": {
             "cache": false,
@@ -656,7 +692,8 @@
             "options": {
               "command": "./gradlew :list:outgoingVariants"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projects": {
             "cache": false,
@@ -669,7 +706,8 @@
             "options": {
               "command": "./gradlew :list:projects"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "properties": {
             "cache": false,
@@ -682,7 +720,8 @@
             "options": {
               "command": "./gradlew :list:properties"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "resolvableConfigurations": {
             "cache": false,
@@ -695,7 +734,8 @@
             "options": {
               "command": "./gradlew :list:resolvableConfigurations"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "tasks": {
             "cache": false,
@@ -708,7 +748,8 @@
             "options": {
               "command": "./gradlew :list:tasks"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projectReport": {
             "cache": false,
@@ -724,7 +765,8 @@
             "options": {
               "command": "./gradlew :list:projectReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "check": {
             "cache": true,
@@ -737,7 +779,8 @@
             "options": {
               "command": "./gradlew :list:check"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "test": {
             "cache": true,
@@ -757,7 +800,8 @@
             "options": {
               "command": "./gradlew :list:test"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": [],
@@ -834,7 +878,8 @@
             "options": {
               "command": "./gradlew :app:run"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "assemble": {
             "cache": true,
@@ -847,7 +892,8 @@
             "options": {
               "command": "./gradlew :app:assemble"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "build": {
             "cache": true,
@@ -856,8 +902,7 @@
               "^default"
             ],
             "dependsOn": [
-              "^build",
-              "classes"
+              "^build"
             ],
             "metadata": {
               "technologies": [
@@ -871,7 +916,8 @@
             "options": {
               "command": "./gradlew :app:build"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildDependents": {
             "cache": true,
@@ -884,7 +930,8 @@
             "options": {
               "command": "./gradlew :app:buildDependents"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildNeeded": {
             "cache": true,
@@ -897,7 +944,8 @@
             "options": {
               "command": "./gradlew :app:buildNeeded"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "classes": {
             "cache": true,
@@ -920,7 +968,8 @@
             "options": {
               "command": "./gradlew :app:classes"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "clean": {
             "cache": true,
@@ -933,7 +982,8 @@
             "options": {
               "command": "./gradlew :app:clean"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "jar": {
             "cache": true,
@@ -946,7 +996,8 @@
             "options": {
               "command": "./gradlew :app:jar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "testClasses": {
             "cache": true,
@@ -959,7 +1010,8 @@
             "options": {
               "command": "./gradlew :app:testClasses"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "task1": {
             "cache": false,
@@ -972,7 +1024,8 @@
             "options": {
               "command": "./gradlew :app:task1"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "assembleDist": {
             "cache": false,
@@ -985,7 +1038,8 @@
             "options": {
               "command": "./gradlew :app:assembleDist"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "distTar": {
             "cache": false,
@@ -998,7 +1052,8 @@
             "options": {
               "command": "./gradlew :app:distTar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "distZip": {
             "cache": false,
@@ -1011,7 +1066,8 @@
             "options": {
               "command": "./gradlew :app:distZip"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "installDist": {
             "cache": false,
@@ -1024,7 +1080,8 @@
             "options": {
               "command": "./gradlew :app:installDist"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javadoc": {
             "cache": false,
@@ -1037,7 +1094,8 @@
             "options": {
               "command": "./gradlew :app:javadoc"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildEnvironment": {
             "cache": false,
@@ -1050,7 +1108,8 @@
             "options": {
               "command": "./gradlew :app:buildEnvironment"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencies": {
             "cache": false,
@@ -1063,7 +1122,8 @@
             "options": {
               "command": "./gradlew :app:dependencies"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencyInsight": {
             "cache": false,
@@ -1076,7 +1136,8 @@
             "options": {
               "command": "./gradlew :app:dependencyInsight"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "help": {
             "cache": false,
@@ -1089,7 +1150,8 @@
             "options": {
               "command": "./gradlew :app:help"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javaToolchains": {
             "cache": false,
@@ -1102,7 +1164,8 @@
             "options": {
               "command": "./gradlew :app:javaToolchains"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "kotlinDslAccessorsReport": {
             "cache": false,
@@ -1115,7 +1178,8 @@
             "options": {
               "command": "./gradlew :app:kotlinDslAccessorsReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "outgoingVariants": {
             "cache": false,
@@ -1128,7 +1192,8 @@
             "options": {
               "command": "./gradlew :app:outgoingVariants"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projects": {
             "cache": false,
@@ -1141,7 +1206,8 @@
             "options": {
               "command": "./gradlew :app:projects"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "properties": {
             "cache": false,
@@ -1154,7 +1220,8 @@
             "options": {
               "command": "./gradlew :app:properties"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "resolvableConfigurations": {
             "cache": false,
@@ -1167,7 +1234,8 @@
             "options": {
               "command": "./gradlew :app:resolvableConfigurations"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "tasks": {
             "cache": false,
@@ -1180,7 +1248,8 @@
             "options": {
               "command": "./gradlew :app:tasks"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projectReport": {
             "cache": false,
@@ -1196,7 +1265,8 @@
             "options": {
               "command": "./gradlew :app:projectReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "check": {
             "cache": true,
@@ -1209,7 +1279,8 @@
             "options": {
               "command": "./gradlew :app:check"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "test": {
             "cache": true,
@@ -1229,7 +1300,8 @@
             "options": {
               "command": "./gradlew :app:test"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": [],
@@ -1304,26 +1376,48 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task run",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew run"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "assemble": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task assemble",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew assemble"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "build": {
             "cache": true,
@@ -1332,13 +1426,22 @@
               "^default"
             ],
             "dependsOn": [
-              "^build",
-              "classes"
+              "^build"
             ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task build",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/build"
@@ -1347,33 +1450,56 @@
             "options": {
               "command": "./gradlew build"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildDependents": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task buildDependents",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew buildDependents"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildNeeded": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task buildNeeded",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew buildNeeded"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "classes": {
             "cache": true,
@@ -1387,7 +1513,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task classes",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/build/classes"
@@ -1396,300 +1532,556 @@
             "options": {
               "command": "./gradlew classes"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "clean": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task clean",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew clean"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "jar": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task jar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew jar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "testClasses": {
             "cache": true,
+            "dependsOn": [
+              "classes"
+            ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task testClasses",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew testClasses"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "init": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task init",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew init"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "wrapper": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task wrapper",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew wrapper"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "task1": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task task1",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew task1"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "assembleDist": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task assembleDist",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew assembleDist"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "distTar": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task distTar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew distTar"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "distZip": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task distZip",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew distZip"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "installDist": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task installDist",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew installDist"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javadoc": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task javadoc",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew javadoc"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "buildEnvironment": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task buildEnvironment",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew buildEnvironment"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencies": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task dependencies",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew dependencies"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "dependencyInsight": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task dependencyInsight",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew dependencyInsight"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "help": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task help",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew help"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "javaToolchains": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task javaToolchains",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew javaToolchains"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "kotlinDslAccessorsReport": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task kotlinDslAccessorsReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew kotlinDslAccessorsReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "outgoingVariants": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task outgoingVariants",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew outgoingVariants"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projects": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task projects",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew projects"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "properties": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task properties",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew properties"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "resolvableConfigurations": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task resolvableConfigurations",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew resolvableConfigurations"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "tasks": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task tasks",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew tasks"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "projectReport": {
             "cache": false,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task projectReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/build/reports/project"
@@ -1698,20 +2090,32 @@
             "options": {
               "command": "./gradlew projectReport"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "check": {
             "cache": true,
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task check",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew check"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           },
           "test": {
             "cache": true,
@@ -1720,18 +2124,29 @@
               "^default"
             ],
             "dependsOn": [
-              "classes"
+              "testClasses"
             ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew test"
             },
-            "configurations": {}
+            "configurations": {},
+            "parallelism": true
           }
         },
         "implicitDependencies": [],

@@ -1,16 +1,16 @@
 {
   "version": "6.0",
-  "nxVersion": "19.3.1",
+  "nxVersion": "19.6.0-beta.5",
   "deps": {
-    "nx": "19.3.1",
-    "@nx/gradle": "19.3.1",
-    "@nx/workspace": "19.3.1"
+    "nx": "19.6.0-beta.5",
+    "@nx/gradle": "19.6.0-beta.5",
+    "@nx/workspace": "19.6.0-beta.5"
   },
   "pathMappings": {},
   "nxJsonPlugins": [
     {
       "name": "@nx/gradle",
-      "version": "19.3.1",
+      "version": "19.6.0-beta.5",
       "options": {
         "testTargetName": "test",
         "classesTargetName": "classes",
@@ -21,6 +21,27 @@
   "fileMap": {
     "nonProjectFiles": [],
     "projectFileMap": {
+      "app": [
+        {
+          "file": "app/build.gradle.kts",
+          "hash": "1965052749166143223",
+          "deps": [
+            "utilities"
+          ]
+        },
+        {
+          "file": "app/src/main/java/org/example/app/App.java",
+          "hash": "7797906291273752357"
+        },
+        {
+          "file": "app/src/main/java/org/example/app/MessageUtils.java",
+          "hash": "2078673016517968054"
+        },
+        {
+          "file": "app/src/test/java/org/example/app/MessageUtilsTest.java",
+          "hash": "15891109803285817998"
+        }
+      ],
       "list": [
         {
           "file": "list/build.gradle.kts",
@@ -67,7 +88,7 @@
         },
         {
           "file": ".gitignore",
-          "hash": "6969859279603773268"
+          "hash": "14090545204379191620"
         },
         {
           "file": ".nx/nxw.js",
@@ -127,32 +148,11 @@
         },
         {
           "file": "nx.json",
-          "hash": "3179041361176487346"
+          "hash": "12893413195576752835"
         },
         {
           "file": "settings.gradle.kts",
           "hash": "3646582444452617464"
-        }
-      ],
-      "app": [
-        {
-          "file": "app/build.gradle.kts",
-          "hash": "1965052749166143223",
-          "deps": [
-            "utilities"
-          ]
-        },
-        {
-          "file": "app/src/main/java/org/example/app/App.java",
-          "hash": "7797906291273752357"
-        },
-        {
-          "file": "app/src/main/java/org/example/app/MessageUtils.java",
-          "hash": "2078673016517968054"
-        },
-        {
-          "file": "app/src/test/java/org/example/app/MessageUtilsTest.java",
-          "hash": "15891109803285817998"
         }
       ]
     }
