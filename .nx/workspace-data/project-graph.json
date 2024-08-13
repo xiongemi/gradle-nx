@@ -52,7 +52,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:assemble",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -73,7 +83,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:build",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/utilities/build"
@@ -90,7 +110,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:buildDependents",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -104,7 +134,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:buildNeeded",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -125,7 +165,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:classes",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/utilities/build/classes"
@@ -142,7 +192,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:clean",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -156,7 +216,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:jar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -167,10 +237,23 @@
           },
           "testClasses": {
             "cache": true,
+            "dependsOn": [
+              "classes"
+            ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:testClasses",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -184,7 +267,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:javadoc",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -198,7 +291,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:buildEnvironment",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -212,7 +315,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:dependencies",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -226,7 +339,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:dependencyInsight",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -240,7 +363,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:help",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -254,7 +387,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:javaToolchains",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -268,7 +411,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:kotlinDslAccessorsReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -282,7 +435,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:outgoingVariants",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -296,7 +459,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:projects",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -310,7 +483,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:properties",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -324,7 +507,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:resolvableConfigurations",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -338,7 +531,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:tasks",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -352,7 +555,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:projectReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/utilities/build/reports/project"
@@ -369,7 +582,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:check",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -385,13 +608,27 @@
               "^default"
             ],
             "dependsOn": [
-              "classes"
+              "testClasses"
             ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :utilities:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
+            "outputs": [
+              "{workspaceRoot}/utilities/build/reports/tests",
+              "{workspaceRoot}/utilities/build/test-results"
+            ],
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew :utilities:test"
@@ -443,6 +680,8 @@
             ],
             "Verification": [
               "check",
+              "test-ci--LinkedListTest",
+              "test-ci",
               "test"
             ]
           },
@@ -456,7 +695,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:assemble",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -477,7 +726,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:build",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/list/build"
@@ -494,7 +753,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:buildDependents",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -508,7 +777,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:buildNeeded",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -529,7 +808,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:classes",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/list/build/classes"
@@ -546,7 +835,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:clean",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -560,7 +859,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:jar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -571,10 +880,23 @@
           },
           "testClasses": {
             "cache": true,
+            "dependsOn": [
+              "classes"
+            ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:testClasses",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -588,7 +910,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:javadoc",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -602,7 +934,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:buildEnvironment",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -616,7 +958,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:dependencies",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -630,7 +982,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:dependencyInsight",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -644,7 +1006,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:help",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -658,7 +1030,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:javaToolchains",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -672,7 +1054,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:kotlinDslAccessorsReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -686,7 +1078,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:outgoingVariants",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -700,7 +1102,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:projects",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -714,7 +1126,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:properties",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -728,7 +1150,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:resolvableConfigurations",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -742,7 +1174,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:tasks",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -756,7 +1198,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:projectReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/list/build/reports/project"
@@ -773,13 +1225,98 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:check",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew :list:check"
             },
             "configurations": {},
+            "parallelism": true
+          },
+          "test-ci--LinkedListTest": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "testClasses"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ],
+              "description": "Runs Gradle test list/src/test/java/org/example/list/LinkedListTest.java in CI",
+              "help": {
+                "command": "./gradlew help --task :list:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
+            },
+            "outputs": [
+              "{workspaceRoot}/list/build/reports/tests",
+              "{workspaceRoot}/list/build/test-results"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :list:test --tests LinkedListTest"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "test-ci": {
+            "executor": "nx:noop",
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              {
+                "target": "test-ci--LinkedListTest",
+                "projects": "self",
+                "params": "forward"
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/list/build/reports/tests",
+              "{workspaceRoot}/list/build/test-results"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ],
+              "description": "Runs Gradle Tests in CI",
+              "nonAtomizedTarget": "test",
+              "help": {
+                "command": "./gradlew help --task :list:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
+            },
+            "configurations": {},
+            "options": {},
             "parallelism": true
           },
           "test": {
@@ -789,13 +1326,27 @@
               "^default"
             ],
             "dependsOn": [
-              "classes"
+              "testClasses"
             ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :list:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
+            "outputs": [
+              "{workspaceRoot}/list/build/reports/tests",
+              "{workspaceRoot}/list/build/test-results"
+            ],
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew :list:test"
@@ -859,6 +1410,8 @@
             ],
             "Verification": [
               "check",
+              "test-ci--MessageUtilsTest",
+              "test-ci",
               "test"
             ]
           },
@@ -872,7 +1425,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:run",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -886,7 +1449,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:assemble",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -907,7 +1480,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:build",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/app/build"
@@ -924,7 +1507,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:buildDependents",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -938,7 +1531,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:buildNeeded",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -959,7 +1562,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:classes",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/app/build/classes"
@@ -976,7 +1589,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:clean",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -990,7 +1613,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:jar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1001,10 +1634,23 @@
           },
           "testClasses": {
             "cache": true,
+            "dependsOn": [
+              "classes"
+            ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:testClasses",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1018,7 +1664,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:task1",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1032,7 +1688,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:assembleDist",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1046,7 +1712,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:distTar",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1060,7 +1736,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:distZip",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1074,7 +1760,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:installDist",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1088,7 +1784,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:javadoc",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1102,7 +1808,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:buildEnvironment",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1116,7 +1832,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:dependencies",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1130,7 +1856,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:dependencyInsight",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1144,7 +1880,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:help",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1158,7 +1904,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:javaToolchains",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1172,7 +1928,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:kotlinDslAccessorsReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1186,7 +1952,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:outgoingVariants",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1200,7 +1976,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:projects",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1214,7 +2000,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:properties",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1228,7 +2024,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:resolvableConfigurations",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1242,7 +2048,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:tasks",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
@@ -1256,7 +2072,17 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:projectReport",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "outputs": [
               "{workspaceRoot}/app/build/reports/project"
@@ -1273,13 +2099,98 @@
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:check",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew :app:check"
             },
             "configurations": {},
+            "parallelism": true
+          },
+          "test-ci--MessageUtilsTest": {
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              "testClasses"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ],
+              "description": "Runs Gradle test app/src/test/java/org/example/app/MessageUtilsTest.java in CI",
+              "help": {
+                "command": "./gradlew help --task :app:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
+            },
+            "outputs": [
+              "{workspaceRoot}/app/build/reports/tests",
+              "{workspaceRoot}/app/build/test-results"
+            ],
+            "executor": "nx:run-commands",
+            "options": {
+              "command": "./gradlew :app:test --tests MessageUtilsTest"
+            },
+            "configurations": {},
+            "parallelism": true
+          },
+          "test-ci": {
+            "executor": "nx:noop",
+            "cache": true,
+            "inputs": [
+              "default",
+              "^default"
+            ],
+            "dependsOn": [
+              {
+                "target": "test-ci--MessageUtilsTest",
+                "projects": "self",
+                "params": "forward"
+              }
+            ],
+            "outputs": [
+              "{workspaceRoot}/app/build/reports/tests",
+              "{workspaceRoot}/app/build/test-results"
+            ],
+            "metadata": {
+              "technologies": [
+                "gradle"
+              ],
+              "description": "Runs Gradle Tests in CI",
+              "nonAtomizedTarget": "test",
+              "help": {
+                "command": "./gradlew help --task :app:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
+            },
+            "configurations": {},
+            "options": {},
             "parallelism": true
           },
           "test": {
@@ -1289,13 +2200,27 @@
               "^default"
             ],
             "dependsOn": [
-              "classes"
+              "testClasses"
             ],
             "metadata": {
               "technologies": [
                 "gradle"
-              ]
+              ],
+              "help": {
+                "command": "./gradlew help --task :app:test",
+                "example": {
+                  "options": {
+                    "args": [
+                      "--rerun"
+                    ]
+                  }
+                }
+              }
             },
+            "outputs": [
+              "{workspaceRoot}/app/build/reports/tests",
+              "{workspaceRoot}/app/build/test-results"
+            ],
             "executor": "nx:run-commands",
             "options": {
               "command": "./gradlew :app:test"

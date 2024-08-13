@@ -14,7 +14,8 @@
       "options": {
         "testTargetName": "test",
         "classesTargetName": "classes",
-        "buildTargetName": "build"
+        "buildTargetName": "build",
+        "ciTargetName": "test-ci"
       }
     }
   ],
@@ -42,41 +43,6 @@
           "hash": "15891109803285817998"
         }
       ],
-      "list": [
-        {
-          "file": "list/build.gradle.kts",
-          "hash": "6436321262153262270"
-        },
-        {
-          "file": "list/src/main/java/org/example/list/LinkedList.java",
-          "hash": "8229133109996014460"
-        },
-        {
-          "file": "list/src/test/java/org/example/list/LinkedListTest.java",
-          "hash": "1765234574577938622"
-        }
-      ],
-      "utilities": [
-        {
-          "file": "utilities/build.gradle.kts",
-          "hash": "10520838754640360641",
-          "deps": [
-            "list"
-          ]
-        },
-        {
-          "file": "utilities/src/main/java/org/example/utilities/JoinUtils.java",
-          "hash": "3702364115617000706"
-        },
-        {
-          "file": "utilities/src/main/java/org/example/utilities/SplitUtils.java",
-          "hash": "12226535336337952737"
-        },
-        {
-          "file": "utilities/src/main/java/org/example/utilities/StringUtils.java",
-          "hash": "9459597037867118760"
-        }
-      ],
       "add-nx-to-gradle": [
         {
           "file": ".gitattributes",
@@ -84,7 +50,7 @@
         },
         {
           "file": ".github/workflows/ci.yml",
-          "hash": "9616709790032373174"
+          "hash": "16157125979810129246"
         },
         {
           "file": ".gitignore",
@@ -148,11 +114,46 @@
         },
         {
           "file": "nx.json",
-          "hash": "12893413195576752835"
+          "hash": "7977214728295533854"
         },
         {
           "file": "settings.gradle.kts",
           "hash": "3646582444452617464"
+        }
+      ],
+      "list": [
+        {
+          "file": "list/build.gradle.kts",
+          "hash": "6436321262153262270"
+        },
+        {
+          "file": "list/src/main/java/org/example/list/LinkedList.java",
+          "hash": "8229133109996014460"
+        },
+        {
+          "file": "list/src/test/java/org/example/list/LinkedListTest.java",
+          "hash": "1765234574577938622"
+        }
+      ],
+      "utilities": [
+        {
+          "file": "utilities/build.gradle.kts",
+          "hash": "10520838754640360641",
+          "deps": [
+            "list"
+          ]
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/JoinUtils.java",
+          "hash": "3702364115617000706"
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/SplitUtils.java",
+          "hash": "12226535336337952737"
+        },
+        {
+          "file": "utilities/src/main/java/org/example/utilities/StringUtils.java",
+          "hash": "9459597037867118760"
         }
       ]
     }
