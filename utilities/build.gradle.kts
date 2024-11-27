@@ -4,7 +4,6 @@
 
 plugins {
     id("buildlogic.java-library-conventions")
-    id("gradle.plugin.greeting") version("0.1.0")
 }
 
 dependencies {
