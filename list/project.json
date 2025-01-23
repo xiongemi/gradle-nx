@@ -24,7 +24,7 @@
     },
     "buildDependents": {
       "cache": true,
-      "dependsOn": ["utilities:buildDependents", "list:build"],
+      "dependsOn": ["list:build", "utilities:buildDependents"],
       "options": { "cwd": "." },
       "command": "./gradlew :list:buildDependents",
       "metadata": {
@@ -69,7 +69,7 @@
     },
     "classes": {
       "cache": true,
-      "dependsOn": ["list:compileJava", "list:processResources"],
+      "dependsOn": ["list:compileJava"],
       "options": { "cwd": "." },
       "command": "./gradlew :list:classes",
       "metadata": {
@@ -724,6 +724,22 @@
     },
     "test": {
       "cache": true,
+      "inputs": [
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList14Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList7Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList12Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList6Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList13Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList3Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList5Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList8Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList10Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList2Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList4Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList9Test.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedListTest.class",
+        "{projectRoot}/build/classes/java/test/org/example/list/LinkedList11Test.class"
+      ],
       "outputs": [
         "{projectRoot}/build/test-results/test/binary",
         "{projectRoot}/build/reports/tests/test",
@@ -745,7 +761,7 @@
     },
     "testClasses": {
       "cache": true,
-      "dependsOn": ["list:processTestResources", "list:compileTestJava"],
+      "dependsOn": ["list:compileTestJava"],
       "options": { "cwd": "." },
       "command": "./gradlew :list:testClasses",
       "metadata": {

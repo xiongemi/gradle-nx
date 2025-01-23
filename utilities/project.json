@@ -49,7 +49,7 @@
     },
     "buildNeeded": {
       "cache": true,
-      "dependsOn": ["utilities:build", "list:buildNeeded"],
+      "dependsOn": ["list:buildNeeded", "utilities:build"],
       "options": { "cwd": "." },
       "command": "./gradlew :utilities:buildNeeded",
       "metadata": {
@@ -73,7 +73,7 @@
     },
     "classes": {
       "cache": true,
-      "dependsOn": ["utilities:compileJava", "utilities:processResources"],
+      "dependsOn": ["utilities:compileJava"],
       "options": { "cwd": "." },
       "command": "./gradlew :utilities:classes",
       "metadata": {
@@ -372,10 +372,7 @@
     },
     "testClasses": {
       "cache": true,
-      "dependsOn": [
-        "utilities:processTestResources",
-        "utilities:compileTestJava"
-      ],
+      "dependsOn": ["utilities:compileTestJava"],
       "options": { "cwd": "." },
       "command": "./gradlew :utilities:testClasses",
       "metadata": {

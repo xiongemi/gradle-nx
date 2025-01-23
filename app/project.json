@@ -2,7 +2,7 @@
   "targets": {
     "assemble": {
       "cache": true,
-      "dependsOn": ["app:jar", "app:distZip", "app:distTar"],
+      "dependsOn": ["app:jar"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:assemble",
       "metadata": {
@@ -13,7 +13,7 @@
     },
     "assembleDist": {
       "cache": true,
-      "dependsOn": ["app:distTar", "app:distZip"],
+      "dependsOn": [],
       "options": { "cwd": "." },
       "command": "./gradlew :app:assembleDist",
       "metadata": {
@@ -56,7 +56,7 @@
     },
     "buildNeeded": {
       "cache": true,
-      "dependsOn": ["utilities:buildNeeded", "app:build"],
+      "dependsOn": ["app:build", "utilities:buildNeeded"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:buildNeeded",
       "metadata": {
@@ -78,7 +78,7 @@
     },
     "classes": {
       "cache": true,
-      "dependsOn": ["app:compileJava", "app:processResources"],
+      "dependsOn": ["app:compileJava", "list:classes", "utilities:classes"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:classes",
       "metadata": {
@@ -248,7 +248,7 @@
         "{projectRoot}/build/scripts/app.bat"
       ],
       "outputs": ["{projectRoot}/build/distributions/app.tar"],
-      "dependsOn": ["app:jar", "utilities:jar", "list:jar", "app:startScripts"],
+      "dependsOn": ["app:jar", "utilities:jar", "list:jar"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:distTar",
       "metadata": {
@@ -267,7 +267,7 @@
         "{projectRoot}/build/scripts/app.bat"
       ],
       "outputs": ["{projectRoot}/build/distributions/app.zip"],
-      "dependsOn": ["app:jar", "utilities:jar", "list:jar", "app:startScripts"],
+      "dependsOn": ["app:jar", "utilities:jar", "list:jar"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:distZip",
       "metadata": {
@@ -296,7 +296,7 @@
         "{projectRoot}/build/scripts/app.bat"
       ],
       "outputs": ["{projectRoot}/build/install/app"],
-      "dependsOn": ["app:jar", "utilities:jar", "list:jar", "app:startScripts"],
+      "dependsOn": ["app:jar", "utilities:jar", "list:jar"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:installDist",
       "metadata": {
@@ -518,7 +518,7 @@
     },
     "testClasses": {
       "cache": true,
-      "dependsOn": ["app:processTestResources", "app:compileTestJava"],
+      "dependsOn": ["app:compileTestJava"],
       "options": { "cwd": "." },
       "command": "./gradlew :app:testClasses",
       "metadata": {
