@@ -1,9 +1,22 @@
+plugins {
+    id("dev.nx.gradle.native") version("+")
+}
+
 allprojects {
   apply {
       plugin("project-report")
+      plugin("dev.nx.gradle.native")
   }
 }
 
-plugins {
-    id("io.nx.gradle.plugin.Nodes") version("0.1.0")
-}
+tasks.register("projectReportAll") {
+        // All project reports of subprojects
+        allprojects.forEach {
+            dependsOn(it.tasks.getAt("projectReport"))
+        }
+    
+        // All projectReportAll of included builds
+        gradle.includedBuilds.forEach {
+            dependsOn(it.task(":projectReportAll"))
+        }
+    }
