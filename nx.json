@@ -1,8 +1,7 @@
 {
   "targetDefaults": {
     "build": {
-      "cache": true,
-      "dependsOn": ["^build"]
+      "cache": true
     },
     "lint": {
       "cache": true
@@ -15,23 +14,17 @@
     }
   },
   "installation": {
-    "version": "20.1.0",
+    "version": "21.0.0",
     "plugins": {
-      "@nx/gradle": "20.1.0",
-      "@nx/workspace": "20.1.0"
+      "@nx/gradle": "21.0.0",
+      "@nx/workspace": "21.0.0"
     }
   },
-  "plugins": [
-    {
-      "plugin": "@nx/gradle",
-      "options": {
-        "testTargetName": "test",
-        "classesTargetName": "classes",
-        "buildTargetName": "build",
-        "ciTargetName": "test-ci"
-      }
-    }
-  ],
+  "plugins": [],
   "nxCloudAccessToken": "Yzk2YWZmNWUtYjNlOC00ZTJiLWFkNzctOTRlNzRlMzVlZDcwfHJlYWQtd3JpdGU=",
-  "nxCloudUrl": "https://cloud.nx.app/"
+  "nxCloudUrl": "https://cloud.nx.app/",
+  "namedInputs": {
+    "default": ["{projectRoot}/**/*"],
+    "production": ["default", "!{projectRoot}/src/test/**/*"]
+  }
 }

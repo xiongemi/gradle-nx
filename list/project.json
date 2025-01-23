@@ -1,0 +1,807 @@
+{
+  "targets": {
+    "assemble": {
+      "cache": true,
+      "dependsOn": ["list:jar"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:assemble --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles the outputs of this project.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:assemble" }
+      }
+    },
+    "build": {
+      "cache": true,
+      "dependsOn": ["list:check", "list:assemble"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:build --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles and tests this project.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:build" }
+      }
+    },
+    "buildDependents": {
+      "cache": true,
+      "dependsOn": ["utilities:buildDependents", "list:build"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:buildDependents --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles and tests this project and all projects that depend on it.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:buildDependents" }
+      }
+    },
+    "buildEnvironment": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:buildEnvironment --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays all buildscript dependencies declared in project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:buildEnvironment"
+        }
+      }
+    },
+    "buildNeeded": {
+      "cache": true,
+      "dependsOn": ["list:build"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:buildNeeded --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles and tests this project and all projects it depends on.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:buildNeeded" }
+      }
+    },
+    "check": {
+      "cache": true,
+      "dependsOn": ["list:test"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:check --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Runs all checks.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:check" }
+      }
+    },
+    "classes": {
+      "cache": true,
+      "dependsOn": ["list:compileJava", "list:processResources"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:classes --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles main classes.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:classes" }
+      }
+    },
+    "clean": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:clean --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Deletes the build directory.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:clean" }
+      }
+    },
+    "compileJava": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/main/java/org/example/list/LinkedList.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/main",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/main",
+        "{projectRoot}/build/generated/sources/headers/java/main",
+        "{projectRoot}/build/tmp/compileJava/previous-compilation-data.bin"
+      ],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:compileJava --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Compiles main Java source.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:compileJava" }
+      }
+    },
+    "ci--LinkedListTest": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedListTest.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedListTest",
+      "metadata": {
+        "description": "Runs Gradle test LinkedListTest in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList14Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList14Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList14Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList14Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList13Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList13Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList13Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList13Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList12Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList12Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList12Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList12Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList7Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList7Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList7Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList7Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList6Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList6Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList6Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList6Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList9Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList9Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList9Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList9Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList8Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList8Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList8Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList8Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList3Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList3Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList3Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList3Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList2Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList2Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList2Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList2Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList4Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList4Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList4Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList4Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList5Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList5Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList5Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList5Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList10Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList10Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList10Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList10Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci--LinkedList11Test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedList11Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --tests LinkedList11Test",
+      "metadata": {
+        "description": "Runs Gradle test LinkedList11Test in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "ci": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedListTest.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList14Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList13Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList12Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList7Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList6Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList9Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList8Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList3Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList2Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList4Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList5Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList10Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList11Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": [
+        {
+          "target": "ci--LinkedListTest",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList14Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList13Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList12Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList7Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList6Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList9Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList8Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList3Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList2Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList4Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList5Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList10Test",
+          "projects": "self",
+          "params": "forward"
+        },
+        {
+          "target": "ci--LinkedList11Test",
+          "projects": "self",
+          "params": "forward"
+        }
+      ],
+      "options": { "cwd": "." },
+      "executor": "nx:noop",
+      "metadata": {
+        "description": "Runs Gradle Tests in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "compileTestJava": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/list/LinkedListTest.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList14Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList13Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList12Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList7Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList6Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList9Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList8Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList3Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList2Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList4Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList5Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList10Test.java",
+        "{projectRoot}/src/test/java/org/example/list/LinkedList11Test.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin"
+      ],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:compileTestJava --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Compiles test Java source.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:compileTestJava" }
+      }
+    },
+    "components": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:components --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the components produced by project \u0027:list\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:components" }
+      }
+    },
+    "dependencies": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:dependencies --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays all dependencies declared in project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:dependencies" }
+      }
+    },
+    "dependencyInsight": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:dependencyInsight --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the insight into a specific dependency in project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:dependencyInsight"
+        }
+      }
+    },
+    "dependentComponents": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:dependentComponents --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the dependent components of components in project \u0027:list\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:dependentComponents"
+        }
+      }
+    },
+    "help": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:help --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays a help message.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:help" }
+      }
+    },
+    "jar": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/classes/java/main/org/example/list/LinkedList$Node.class",
+        "{projectRoot}/build/classes/java/main/org/example/list/LinkedList.class",
+        "{projectRoot}/build/tmp/jar/MANIFEST.MF"
+      ],
+      "outputs": ["{projectRoot}/build/libs/list.jar"],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:jar --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles a jar archive containing the classes of the \u0027main\u0027 feature.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:jar" }
+      }
+    },
+    "javaToolchains": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:javaToolchains --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the detected java toolchains.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:javaToolchains" }
+      }
+    },
+    "javadoc": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/main/java/org/example/list/LinkedList.java"
+      ],
+      "outputs": ["{projectRoot}/build/docs/javadoc"],
+      "dependsOn": ["list:classes", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:javadoc --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Generates Javadoc API documentation for the \u0027main\u0027 feature.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:javadoc" }
+      }
+    },
+    "kotlinDslAccessorsReport": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:kotlinDslAccessorsReport --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Prints the Kotlin code for accessing the currently available project extensions and conventions.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:kotlinDslAccessorsReport"
+        }
+      }
+    },
+    "model": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:model --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the configuration model of project \u0027:list\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:model" }
+      }
+    },
+    "outgoingVariants": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:outgoingVariants --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the outgoing variants of project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:outgoingVariants"
+        }
+      }
+    },
+    "processResources": {
+      "cache": true,
+      "outputs": ["{projectRoot}/build/resources/main"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:processResources --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Processes main resources.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:processResources"
+        }
+      }
+    },
+    "processTestResources": {
+      "cache": true,
+      "outputs": ["{projectRoot}/build/resources/test"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:processTestResources --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Processes test resources.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:processTestResources"
+        }
+      }
+    },
+    "projects": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:projects --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the sub-projects of project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:projects" }
+      }
+    },
+    "properties": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:properties --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the properties of project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:properties" }
+      }
+    },
+    "resolvableConfigurations": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:resolvableConfigurations --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the configurations that can be resolved in project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :list:resolvableConfigurations"
+        }
+      }
+    },
+    "tasks": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:tasks --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Displays the tasks runnable from project \u0027:list\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:tasks" }
+      }
+    },
+    "test": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/build/test-results/test/binary",
+        "{projectRoot}/build/reports/tests/test",
+        "{projectRoot}/build/test-results/test"
+      ],
+      "dependsOn": [
+        "list:compileTestJava",
+        "list:testClasses",
+        "list:classes",
+        "list:compileJava"
+      ],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:test --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Runs the test suite.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:test" }
+      }
+    },
+    "testClasses": {
+      "cache": true,
+      "dependsOn": ["list:processTestResources", "list:compileTestJava"],
+      "options": { "cwd": "." },
+      "command": "./gradlew :list:testClasses --profile --configuration-cache --build-cache",
+      "metadata": {
+        "description": "Assembles test classes.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :list:testClasses" }
+      }
+    }
+  },
+  "metadata": {
+    "targetGroups": {
+      "build": [
+        "assemble",
+        "build",
+        "buildDependents",
+        "buildNeeded",
+        "classes",
+        "clean",
+        "jar",
+        "testClasses"
+      ],
+      "help": [
+        "buildEnvironment",
+        "dependencies",
+        "dependencyInsight",
+        "help",
+        "javaToolchains",
+        "kotlinDslAccessorsReport",
+        "outgoingVariants",
+        "projects",
+        "properties",
+        "resolvableConfigurations",
+        "tasks"
+      ],
+      "verification": [
+        "check",
+        "ci--LinkedListTest",
+        "ci--LinkedList14Test",
+        "ci--LinkedList13Test",
+        "ci--LinkedList12Test",
+        "ci--LinkedList7Test",
+        "ci--LinkedList6Test",
+        "ci--LinkedList9Test",
+        "ci--LinkedList8Test",
+        "ci--LinkedList3Test",
+        "ci--LinkedList2Test",
+        "ci--LinkedList4Test",
+        "ci--LinkedList5Test",
+        "ci--LinkedList10Test",
+        "ci--LinkedList11Test",
+        "ci",
+        "test"
+      ],
+      "documentation": ["javadoc"]
+    },
+    "technologies": ["gradle"]
+  },
+  "name": "list"
+}
