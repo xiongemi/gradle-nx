@@ -26,6 +26,10 @@ tasks.named("task1"){
     }
 }
 
+tasks.test {
+    // enabled = false
+}
+
 application {
     // Define the main class for the application.
     mainClass = "org.example.app.App"

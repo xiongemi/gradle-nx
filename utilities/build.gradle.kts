@@ -9,3 +9,7 @@ plugins {
 dependencies {
     api(project(":list"))
 }
+
+tasks.test {
+    // enabled = false
+}

@@ -1,9 +1,3 @@
-allprojects {
-  apply {
-      plugin("project-report")
-  }
-}
-
 plugins {
-    id("io.nx.gradle.plugin.Nodes") version("0.1.0")
+    // id("dev.nx.gradle.native") version("+")
 }
