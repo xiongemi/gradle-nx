@@ -2,9 +2,10 @@
   "targets": {
     "assemble": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:jar"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:assemble --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles the outputs of this project.",
         "technologies": ["gradle"],
@@ -13,9 +14,10 @@
     },
     "build": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:check", "list:assemble"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:build --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles and tests this project.",
         "technologies": ["gradle"],
@@ -24,9 +26,10 @@
     },
     "buildDependents": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:build", "utilities:buildDependents"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:buildDependents --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles and tests this project and all projects that depend on it.",
         "technologies": ["gradle"],
@@ -35,8 +38,9 @@
     },
     "buildEnvironment": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:buildEnvironment --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays all buildscript dependencies declared in project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -47,9 +51,10 @@
     },
     "buildNeeded": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:build"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:buildNeeded --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles and tests this project and all projects it depends on.",
         "technologies": ["gradle"],
@@ -58,9 +63,10 @@
     },
     "check": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:test"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:check --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Runs all checks.",
         "technologies": ["gradle"],
@@ -69,9 +75,10 @@
     },
     "classes": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:compileJava", "list:processResources"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:classes --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles main classes.",
         "technologies": ["gradle"],
@@ -80,8 +87,9 @@
     },
     "clean": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:clean --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Deletes the build directory.",
         "technologies": ["gradle"],
@@ -101,7 +109,7 @@
         "{workspaceRoot}/.gradle/configuration-cache"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:compileJava --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Compiles main Java source.",
         "technologies": ["gradle"],
@@ -198,7 +206,7 @@
       ],
       "dependsOn": ["list:classes", "list:compileJava"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:compileTestJava --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Compiles test Java source.",
         "technologies": ["gradle"],
@@ -207,8 +215,9 @@
     },
     "components": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:components --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the components produced by project \u0027:list\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -217,8 +226,9 @@
     },
     "dependencies": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:dependencies --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays all dependencies declared in project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -227,8 +237,9 @@
     },
     "dependencyInsight": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:dependencyInsight --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the insight into a specific dependency in project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -239,8 +250,9 @@
     },
     "dependentComponents": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:dependentComponents --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the dependent components of components in project \u0027:list\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -251,8 +263,9 @@
     },
     "help": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:help --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays a help message.",
         "technologies": ["gradle"],
@@ -272,7 +285,7 @@
       ],
       "dependsOn": ["list:classes", "list:compileJava"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:jar --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles a jar archive containing the classes of the \u0027main\u0027 feature.",
         "technologies": ["gradle"],
@@ -281,8 +294,9 @@
     },
     "javaToolchains": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:javaToolchains --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the detected java toolchains.",
         "technologies": ["gradle"],
@@ -300,7 +314,7 @@
       ],
       "dependsOn": ["list:classes", "list:compileJava"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:javadoc --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Generates Javadoc API documentation for the \u0027main\u0027 feature.",
         "technologies": ["gradle"],
@@ -309,8 +323,9 @@
     },
     "kotlinDslAccessorsReport": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:kotlinDslAccessorsReport --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Prints the Kotlin code for accessing the currently available project extensions and conventions.",
         "technologies": ["gradle"],
@@ -321,8 +336,9 @@
     },
     "model": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:model --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the configuration model of project \u0027:list\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -331,8 +347,9 @@
     },
     "outgoingVariants": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:outgoingVariants --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the outgoing variants of project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -348,7 +365,7 @@
         "{workspaceRoot}/.gradle/configuration-cache"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:processResources --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Processes main resources.",
         "technologies": ["gradle"],
@@ -364,7 +381,7 @@
         "{workspaceRoot}/.gradle/configuration-cache"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:processTestResources --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Processes test resources.",
         "technologies": ["gradle"],
@@ -375,8 +392,9 @@
     },
     "projects": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:projects --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the sub-projects of project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -385,8 +403,9 @@
     },
     "properties": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:properties --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the properties of project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -395,8 +414,9 @@
     },
     "resolvableConfigurations": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:resolvableConfigurations --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the configurations that can be resolved in project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -407,8 +427,9 @@
     },
     "tasks": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:tasks --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the tasks runnable from project \u0027:list\u0027.",
         "technologies": ["gradle"],
@@ -434,7 +455,7 @@
         "list:compileJava"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:test --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Runs the test suite.",
         "technologies": ["gradle"],
@@ -443,9 +464,10 @@
     },
     "testClasses": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "dependsOn": ["list:processTestResources", "list:compileTestJava"],
       "options": { "cwd": "." },
-      "command": "./gradlew :list:testClasses --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Assembles test classes.",
         "technologies": ["gradle"],

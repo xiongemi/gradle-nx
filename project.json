@@ -2,8 +2,9 @@
   "targets": {
     "buildEnvironment": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :buildEnvironment --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays all buildscript dependencies declared in root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -12,8 +13,9 @@
     },
     "components": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :components --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the components produced by root project \u0027add-nx-to-gradle\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -22,8 +24,9 @@
     },
     "createNodes": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :createNodes --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Create nodes and dependencies for Nx",
         "technologies": ["gradle"],
@@ -32,8 +35,9 @@
     },
     "dependencies": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :dependencies --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays all dependencies declared in root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -42,8 +46,9 @@
     },
     "dependencyInsight": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :dependencyInsight --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the insight into a specific dependency in root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -52,8 +57,9 @@
     },
     "dependentComponents": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :dependentComponents --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the dependent components of components in root project \u0027add-nx-to-gradle\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -62,8 +68,9 @@
     },
     "help": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :help --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays a help message.",
         "technologies": ["gradle"],
@@ -72,8 +79,9 @@
     },
     "init": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :init --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Initializes a new Gradle build.",
         "technologies": ["gradle"],
@@ -82,8 +90,9 @@
     },
     "javaToolchains": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :javaToolchains --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the detected java toolchains.",
         "technologies": ["gradle"],
@@ -92,8 +101,9 @@
     },
     "kotlinDslAccessorsReport": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :kotlinDslAccessorsReport --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Prints the Kotlin code for accessing the currently available project extensions and conventions.",
         "technologies": ["gradle"],
@@ -104,8 +114,9 @@
     },
     "model": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :model --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the configuration model of root project \u0027add-nx-to-gradle\u0027. [deprecated]",
         "technologies": ["gradle"],
@@ -114,8 +125,9 @@
     },
     "outgoingVariants": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :outgoingVariants --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the outgoing variants of root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -124,8 +136,9 @@
     },
     "prepareKotlinBuildScriptModel": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :prepareKotlinBuildScriptModel --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "technologies": ["gradle"],
         "help": {
@@ -135,8 +148,9 @@
     },
     "projects": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :projects --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the sub-projects of root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -145,8 +159,9 @@
     },
     "properties": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :properties --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the properties of root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -155,8 +170,9 @@
     },
     "resolvableConfigurations": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :resolvableConfigurations --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the configurations that can be resolved in root project \u0027add-nx-to-gradle\u0027.",
         "technologies": ["gradle"],
@@ -167,8 +183,9 @@
     },
     "tasks": {
       "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
       "options": { "cwd": "." },
-      "command": "./gradlew :tasks --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Displays the tasks runnable from root project \u0027add-nx-to-gradle\u0027 (some of the displayed tasks may belong to subprojects).",
         "technologies": ["gradle"],
@@ -182,7 +199,7 @@
         "{workspaceRoot}/.gradle/configuration-cache"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :updateDaemonJvm --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Generates or updates the Gradle Daemon JVM criteria.",
         "technologies": ["gradle"],
@@ -199,7 +216,7 @@
         "{workspaceRoot}/.gradle/configuration-cache"
       ],
       "options": { "cwd": "." },
-      "command": "./gradlew :wrapper --configuratino-cache",
+      "command": "echo \u0027hello\u0027",
       "metadata": {
         "description": "Generates Gradle wrapper files.",
         "technologies": ["gradle"],
