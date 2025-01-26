@@ -1,9 +1,10 @@
-allprojects {
-  apply {
-      plugin("project-report")
-  }
+plugins {
+    // id("dev.nx.gradle.native") version("+")
 }
 
-plugins {
-    id("io.nx.gradle.plugin.Nodes") version("0.1.0")
+develocity {
+    buildScan {
+        termsOfUseUrl.set("https://gradle.com/help/legal-terms-of-use")
+        termsOfUseAgree.set("yes")
+    }
 }
