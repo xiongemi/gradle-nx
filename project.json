@@ -1,0 +1,251 @@
+{
+  "targets": {
+    "buildEnvironment": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :buildEnvironment --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays all buildscript dependencies declared in root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :buildEnvironment" }
+      }
+    },
+    "components": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :components --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the components produced by root project \u0027add-nx-to-gradle\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :components" }
+      }
+    },
+    "createNodes": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :createNodes --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Create nodes and dependencies for Nx",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :createNodes" }
+      }
+    },
+    "dependencies": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :dependencies --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays all dependencies declared in root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :dependencies" }
+      }
+    },
+    "dependencyInsight": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :dependencyInsight --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the insight into a specific dependency in root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :dependencyInsight" }
+      }
+    },
+    "dependentComponents": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :dependentComponents --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the dependent components of components in root project \u0027add-nx-to-gradle\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :dependentComponents" }
+      }
+    },
+    "help": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :help --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays a help message.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :help" }
+      }
+    },
+    "init": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :init --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Initializes a new Gradle build.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :init" }
+      }
+    },
+    "javaToolchains": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :javaToolchains --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the detected java toolchains.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :javaToolchains" }
+      }
+    },
+    "kotlinDslAccessorsReport": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :kotlinDslAccessorsReport --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Prints the Kotlin code for accessing the currently available project extensions and conventions.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :kotlinDslAccessorsReport"
+        }
+      }
+    },
+    "model": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :model --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the configuration model of root project \u0027add-nx-to-gradle\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :model" }
+      }
+    },
+    "outgoingVariants": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :outgoingVariants --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the outgoing variants of root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :outgoingVariants" }
+      }
+    },
+    "prepareKotlinBuildScriptModel": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :prepareKotlinBuildScriptModel --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :prepareKotlinBuildScriptModel"
+        }
+      }
+    },
+    "projects": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :projects --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the sub-projects of root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :projects" }
+      }
+    },
+    "properties": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :properties --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the properties of root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :properties" }
+      }
+    },
+    "resolvableConfigurations": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :resolvableConfigurations --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the configurations that can be resolved in root project \u0027add-nx-to-gradle\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :resolvableConfigurations"
+        }
+      }
+    },
+    "tasks": {
+      "cache": true,
+      "options": { "cwd": "." },
+      "command": "./gradlew :tasks --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Displays the tasks runnable from root project \u0027add-nx-to-gradle\u0027 (some of the displayed tasks may belong to subprojects).",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :tasks" }
+      }
+    },
+    "updateDaemonJvm": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/gradle/gradle-daemon-jvm.properties",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "options": { "cwd": "." },
+      "command": "./gradlew :updateDaemonJvm --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Generates or updates the Gradle Daemon JVM criteria.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :updateDaemonJvm" }
+      }
+    },
+    "wrapper": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/gradlew.bat",
+        "{projectRoot}/gradle/wrapper/gradle-wrapper.jar",
+        "{projectRoot}/gradle/wrapper/gradle-wrapper.properties",
+        "{projectRoot}/gradlew",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "options": { "cwd": "." },
+      "command": "./gradlew :wrapper --configuration-cache",
+      "parallelism": false,
+      "metadata": {
+        "description": "Generates Gradle wrapper files.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :wrapper" }
+      }
+    }
+  },
+  "metadata": {
+    "targetGroups": {
+      "help": [
+        "buildEnvironment",
+        "dependencies",
+        "dependencyInsight",
+        "help",
+        "javaToolchains",
+        "kotlinDslAccessorsReport",
+        "outgoingVariants",
+        "projects",
+        "properties",
+        "resolvableConfigurations",
+        "tasks"
+      ],
+      "Nx Custom": ["createNodes"],
+      "Build Setup": ["init", "updateDaemonJvm", "wrapper"]
+    },
+    "technologies": ["gradle"]
+  },
+  "projectRoot": ".",
+  "name": "add-nx-to-gradle"
+}
