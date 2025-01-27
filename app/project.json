@@ -1,0 +1,634 @@
+{
+  "targets": {
+    "assemble": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:jar", "app:distZip", "app:distTar"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles the outputs of this project.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:assemble" }
+      }
+    },
+    "assembleDist": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:distTar", "app:distZip"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles the main distributions",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:assembleDist" }
+      }
+    },
+    "build": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:check", "app:assemble"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles and tests this project.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:build" }
+      }
+    },
+    "buildDependents": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:build"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles and tests this project and all projects that depend on it.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:buildDependents" }
+      }
+    },
+    "buildEnvironment": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays all buildscript dependencies declared in project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:buildEnvironment" }
+      }
+    },
+    "buildNeeded": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["utilities:buildNeeded", "app:build"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles and tests this project and all projects it depends on.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:buildNeeded" }
+      }
+    },
+    "check": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:test"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Runs all checks.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:check" }
+      }
+    },
+    "classes": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:compileJava", "app:processResources"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles main classes.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:classes" }
+      }
+    },
+    "clean": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Deletes the build directory.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:clean" }
+      }
+    },
+    "compileJava": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/main/java/org/example/app/MessageUtils.java",
+        "{projectRoot}/src/main/java/org/example/app/App.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/main",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/main",
+        "{projectRoot}/build/generated/sources/headers/java/main",
+        "{projectRoot}/build/tmp/compileJava/previous-compilation-data.bin",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": ["utilities:compileJava", "list:compileJava"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Compiles main Java source.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:compileJava" }
+      }
+    },
+    "ci--MessageUtilsTest": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/app/MessageUtilsTest.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:classes",
+        "app:compileJava",
+        "utilities:compileJava",
+        "list:compileJava"
+      ],
+      "options": { "cwd": "." },
+      "command": "./gradlew :app:test --tests MessageUtilsTest",
+      "metadata": {
+        "description": "Runs Gradle test MessageUtilsTest in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:test" }
+      }
+    },
+    "ci": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/app/MessageUtilsTest.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        {
+          "target": "ci--MessageUtilsTest",
+          "projects": "self",
+          "params": "forward"
+        }
+      ],
+      "options": { "cwd": "." },
+      "executor": "nx:noop",
+      "metadata": {
+        "description": "Runs Gradle Tests in CI",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:test" }
+      }
+    },
+    "compileTestJava": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/test/java/org/example/app/MessageUtilsTest.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/classes/java/test",
+        "{projectRoot}/build/generated/sources/annotationProcessor/java/test",
+        "{projectRoot}/build/generated/sources/headers/java/test",
+        "{projectRoot}/build/tmp/compileTestJava/previous-compilation-data.bin",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:classes",
+        "app:compileJava",
+        "utilities:compileJava",
+        "list:compileJava"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Compiles test Java source.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:compileTestJava" }
+      }
+    },
+    "components": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the components produced by project \u0027:app\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:components" }
+      }
+    },
+    "dependencies": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays all dependencies declared in project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:dependencies" }
+      }
+    },
+    "dependencyInsight": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the insight into a specific dependency in project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :app:dependencyInsight"
+        }
+      }
+    },
+    "dependentComponents": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the dependent components of components in project \u0027:app\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :app:dependentComponents"
+        }
+      }
+    },
+    "distTar": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/libs/app.jar",
+        "{workspaceRoot}/utilities/build/libs/utilities.jar",
+        "{workspaceRoot}/list/build/libs/list.jar",
+        "{projectRoot}/build/scripts/app",
+        "{projectRoot}/build/scripts/app.bat"
+      ],
+      "outputs": [
+        "{projectRoot}/build/distributions/app.tar",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:jar",
+        "utilities:jar",
+        "list:jar",
+        "app:startScripts"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Bundles the project as a distribution.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:distTar" }
+      }
+    },
+    "distZip": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/libs/app.jar",
+        "{workspaceRoot}/utilities/build/libs/utilities.jar",
+        "{workspaceRoot}/list/build/libs/list.jar",
+        "{projectRoot}/build/scripts/app",
+        "{projectRoot}/build/scripts/app.bat"
+      ],
+      "outputs": [
+        "{projectRoot}/build/distributions/app.zip",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:jar",
+        "utilities:jar",
+        "list:jar",
+        "app:startScripts"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Bundles the project as a distribution.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:distZip" }
+      }
+    },
+    "help": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays a help message.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:help" }
+      }
+    },
+    "installDist": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/libs/app.jar",
+        "{workspaceRoot}/utilities/build/libs/utilities.jar",
+        "{workspaceRoot}/list/build/libs/list.jar",
+        "{projectRoot}/build/scripts/app",
+        "{projectRoot}/build/scripts/app.bat"
+      ],
+      "outputs": [
+        "{projectRoot}/build/install/app",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:jar",
+        "utilities:jar",
+        "list:jar",
+        "app:startScripts"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Installs the project as a distribution as-is.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:installDist" }
+      }
+    },
+    "jar": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/classes/java/main/org/example/app/App.class",
+        "{projectRoot}/build/classes/java/main/org/example/app/MessageUtils.class",
+        "{projectRoot}/build/tmp/jar/MANIFEST.MF"
+      ],
+      "outputs": [
+        "{projectRoot}/build/libs/app.jar",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": ["app:classes", "app:compileJava"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles a jar archive containing the classes of the \u0027main\u0027 feature.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:jar" }
+      }
+    },
+    "javaToolchains": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the detected java toolchains.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:javaToolchains" }
+      }
+    },
+    "javadoc": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/src/main/java/org/example/app/MessageUtils.java",
+        "{projectRoot}/src/main/java/org/example/app/App.java"
+      ],
+      "outputs": [
+        "{projectRoot}/build/docs/javadoc",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:classes",
+        "app:compileJava",
+        "utilities:compileJava",
+        "list:compileJava"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Generates Javadoc API documentation for the \u0027main\u0027 feature.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:javadoc" }
+      }
+    },
+    "kotlinDslAccessorsReport": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Prints the Kotlin code for accessing the currently available project extensions and conventions.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :app:kotlinDslAccessorsReport"
+        }
+      }
+    },
+    "model": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the configuration model of project \u0027:app\u0027. [deprecated]",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:model" }
+      }
+    },
+    "outgoingVariants": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the outgoing variants of project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:outgoingVariants" }
+      }
+    },
+    "processResources": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/build/resources/main",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Processes main resources.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:processResources" }
+      }
+    },
+    "processTestResources": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/build/resources/test",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Processes test resources.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :app:processTestResources"
+        }
+      }
+    },
+    "projects": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the sub-projects of project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:projects" }
+      }
+    },
+    "properties": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the properties of project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:properties" }
+      }
+    },
+    "resolvableConfigurations": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the configurations that can be resolved in project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": {
+          "command": "./gradlew help --task :app:resolvableConfigurations"
+        }
+      }
+    },
+    "run": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": [
+        "app:classes",
+        "app:compileJava",
+        "utilities:jar",
+        "list:jar"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Runs this project as a JVM application",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:run" }
+      }
+    },
+    "startScripts": {
+      "cache": true,
+      "outputs": [
+        "{projectRoot}/build/scripts",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": ["app:jar", "utilities:jar", "list:jar"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Creates OS specific scripts to run the project as a JVM application.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:startScripts" }
+      }
+    },
+    "task1": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:classes"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "A custom task",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:task1" }
+      }
+    },
+    "tasks": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Displays the tasks runnable from project \u0027:app\u0027.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:tasks" }
+      }
+    },
+    "test": {
+      "cache": true,
+      "inputs": [
+        "{projectRoot}/build/classes/java/test/org/example/app/MessageUtilsTest.class"
+      ],
+      "outputs": [
+        "{projectRoot}/build/test-results/test/binary",
+        "{projectRoot}/build/reports/tests/test",
+        "{projectRoot}/build/test-results/test",
+        "{workspaceRoot}/.gradle/configuration-cache"
+      ],
+      "dependsOn": [
+        "app:compileTestJava",
+        "app:testClasses",
+        "app:classes",
+        "app:compileJava",
+        "utilities:jar",
+        "list:jar"
+      ],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Runs the test suite.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:test" }
+      }
+    },
+    "testClasses": {
+      "cache": true,
+      "outputs": ["{workspaceRoot}/.gradle/configuration-cache"],
+      "dependsOn": ["app:processTestResources", "app:compileTestJava"],
+      "options": { "cwd": "." },
+      "command": "echo \u0027hello\u0027",
+      "metadata": {
+        "description": "Assembles test classes.",
+        "technologies": ["gradle"],
+        "help": { "command": "./gradlew help --task :app:testClasses" }
+      }
+    }
+  },
+  "metadata": {
+    "targetGroups": {
+      "build": [
+        "assemble",
+        "build",
+        "buildDependents",
+        "buildNeeded",
+        "classes",
+        "clean",
+        "jar",
+        "testClasses"
+      ],
+      "distribution": ["assembleDist", "distTar", "distZip", "installDist"],
+      "help": [
+        "buildEnvironment",
+        "dependencies",
+        "dependencyInsight",
+        "help",
+        "javaToolchains",
+        "kotlinDslAccessorsReport",
+        "outgoingVariants",
+        "projects",
+        "properties",
+        "resolvableConfigurations",
+        "tasks"
+      ],
+      "verification": ["check", "ci--MessageUtilsTest", "ci", "test"],
+      "documentation": ["javadoc"],
+      "application": ["run"],
+      "Custom": ["task1"]
+    },
+    "technologies": ["gradle"]
+  },
+  "name": "app"
+}

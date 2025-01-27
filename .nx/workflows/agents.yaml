@@ -5,7 +5,5 @@ launch-templates:
     init-steps:
       - name: Checkout
         uses: 'nrwl/nx-cloud-workflows/v3.6/workflow-steps/checkout/main.yaml'
-      - name: Setup gradle
-        script: ./gradlew wrapper
       - name: Setup Nx
         script: ./nx --version
