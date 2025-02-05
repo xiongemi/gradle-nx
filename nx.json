@@ -1,37 +1,23 @@
 {
   "targetDefaults": {
     "build": {
-      "cache": true,
-      "dependsOn": ["^build"]
+      "cache": true
     },
     "lint": {
       "cache": true
     },
     "test": {
       "cache": true
-    },
-    "e2e": {
-      "cache": true
     }
   },
   "installation": {
-    "version": "20.1.0",
+    "version": "20.3.2",
     "plugins": {
-      "@nx/gradle": "20.1.0",
-      "@nx/workspace": "20.1.0"
+      "@nx/gradle": "20.3.2",
+      "@nx/workspace": "20.3.2"
     }
   },
-  "plugins": [
-    {
-      "plugin": "@nx/gradle",
-      "options": {
-        "testTargetName": "test",
-        "classesTargetName": "classes",
-        "buildTargetName": "build",
-        "ciTargetName": "test-ci"
-      }
-    }
-  ],
+  "plugins": [],
   "nxCloudUrl": "https://staging.nx.app",
   "nxCloudId": "679415331b1f888450ce7a79"
 }
