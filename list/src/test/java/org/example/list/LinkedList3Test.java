@@ -17,7 +17,7 @@ class LinkedList3Test {
 
     @Test void testAdd() throws InterruptedException {
         LinkedList list = new LinkedList();
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(0);
    
         list.add("one");
         assertEquals(1, list.size());
@@ -35,7 +35,7 @@ class LinkedList3Test {
         list.add("two");
         assertTrue(list.remove("one"));
 
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(0);
 
         assertEquals(1, list.size());
         assertEquals("two", list.get(0));
@@ -51,7 +51,7 @@ class LinkedList3Test {
         list.add("two");
         assertFalse(list.remove("three"));
 
-        TimeUnit.SECONDS.sleep(2);
+        TimeUnit.SECONDS.sleep(0);
         assertEquals(2, list.size());
     }
 }

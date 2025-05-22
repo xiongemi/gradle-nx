@@ -1,8 +1,7 @@
 {
   "targetDefaults": {
     "build": {
-      "cache": true,
-      "dependsOn": ["^build"]
+      "cache": true
     },
     "lint": {
       "cache": true
@@ -14,13 +13,6 @@
       "cache": true
     }
   },
-  "installation": {
-    "version": "20.1.0",
-    "plugins": {
-      "@nx/gradle": "20.1.0",
-      "@nx/workspace": "20.1.0"
-    }
-  },
   "plugins": [
     {
       "plugin": "@nx/gradle",
@@ -28,7 +20,7 @@
         "testTargetName": "test",
         "classesTargetName": "classes",
         "buildTargetName": "build",
-        "ciTargetName": "test-ci"
+        "ciTestTargetName": "test-ci"
       }
     }
   ],

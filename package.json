@@ -1,0 +1,7 @@
+{
+  "name": "gradle-nx",
+  "dependencies": {
+    "@nx/gradle": "^21.1.1",
+    "nx": "^21.1.1"
+  }
+}

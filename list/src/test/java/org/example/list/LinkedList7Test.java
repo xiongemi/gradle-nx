@@ -17,17 +17,17 @@ class LinkedList7Test {
 
     @Test void testAdd() throws InterruptedException {
         LinkedList list = new LinkedList();
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
    
         list.add("one");
         assertEquals(1, list.size());
         assertEquals("one", list.get(0));
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         list.add("two");
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         assertEquals(2, list.size());
         assertEquals("two", list.get(1));
@@ -39,16 +39,16 @@ class LinkedList7Test {
         list.add("one");
         list.add("two");
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         assertTrue(list.remove("one"));
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         assertEquals(1, list.size());
         assertEquals("two", list.get(0));
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         assertTrue(list.remove("two"));
         assertEquals(0, list.size());
@@ -57,15 +57,15 @@ class LinkedList7Test {
     @Test public void testRemoveMissing() throws InterruptedException {
         LinkedList list = new LinkedList();
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
 
         list.add("one");
         list.add("two");
         
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
         assertFalse(list.remove("three"));
 
-        TimeUnit.SECONDS.sleep(10);
+        TimeUnit.SECONDS.sleep(0);
         assertEquals(2, list.size());
     }
 }
